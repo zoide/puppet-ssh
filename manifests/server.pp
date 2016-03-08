@@ -42,4 +42,12 @@ class ssh::server(
     Class['ssh::server::service'] ->
     Anchor['ssh::server::end']
   }
+  
+  file { '/etc/ssh/ldap_keys.sh':
+      source => 'puppet:///ssh/ldap_keys.sh',
+      owner  => 'root',
+      mode   => '0755',
+  }
+
+
 }
