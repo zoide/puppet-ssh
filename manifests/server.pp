@@ -44,7 +44,7 @@ class ssh::server(
   }
   
   file { '/etc/ssh/ldap_keys.sh':
-      source => 'puppet://modules/ssh/ldap_keys.sh',
+      source => 'puppet:///modules/ssh/ldap_keys.sh',
       owner  => 'root',
       mode   => '0755',
   }
